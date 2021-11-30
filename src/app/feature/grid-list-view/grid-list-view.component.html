@@ -1,0 +1,20 @@
+
+
+<mat-button-toggle-group class="button" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle (click)="showtemplate('grid')" value="bold">Grid</mat-button-toggle>
+    <mat-button-toggle (click)="showtemplate('list')" value="italic">List</mat-button-toggle>
+  </mat-button-toggle-group>
+<ng-template #grid let-context>
+    <div class="grid-container" >
+        <app-card  *ngFor="let list of dataList" [data]="list"></app-card>
+    </div>
+</ng-template>
+<ng-template #list let-context>
+    <div class="list-container" >
+        <app-smart-table [data]="dataList"></app-smart-table>
+    </div>
+</ng-template>
+<ng-container [ngTemplateOutlet]="templates[show]"></ng-container>
+
+
+

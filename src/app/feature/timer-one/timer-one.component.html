@@ -1,0 +1,21 @@
+
+<div class="main-container">
+<div class="counter">
+    <app-display-timer [count]="limit"></app-display-timer>
+</div>
+<div class="counter">
+    <app-pause-start-count  [pauseAt]="timer.pauseAt" (start)="startCount($event)" (pause)="pauseCount()" (reset)="resetCount()"></app-pause-start-count>
+</div>
+<div class="timeStamp">
+    <app-time-stamps [timeStamp]="timer.timeStamp"></app-time-stamps>
+</div>
+<div class="timeStamp">
+    <app-start-stop-reset-timer [startNo]="timer.startCount" [pauseNo]="timer.pauseCount"></app-start-stop-reset-timer>
+</div>
+</div>
+
+
+
+
+
+

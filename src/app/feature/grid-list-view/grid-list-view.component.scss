@@ -1,0 +1,33 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+@media  screen and (max-width: 1300px ) {
+    .grid-container{
+        
+        grid-template-columns: auto auto auto ;
+      
+    }
+  }
+
+@media  screen and (max-width: 900px ) {
+    .grid-container{
+      
+        grid-template-columns: auto auto ;
+    }
+  }
+
+@media  screen and (max-width: 480px) {
+    .grid-container{
+
+        grid-template-columns: auto ;
+       
+    }
+  }
+
+
+ 
+
