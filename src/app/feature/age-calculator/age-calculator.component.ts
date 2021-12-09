@@ -9,6 +9,10 @@ export class AgeCalculatorComponent implements OnInit {
 
   dob: Date = new Date();
   age: string = '';
+  hour: number = 0;
+  min: number = 0;
+  second: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,6 +26,14 @@ export class AgeCalculatorComponent implements OnInit {
     let d2 = date.getDate();
     let m2 = 1 + date.getMonth();
     let y2 = date.getFullYear();
+    let todayHour = date.getHours();
+    let todayMin = date.getMinutes();
+    let todaySec = date.getSeconds();
+    let hourDiff = todayHour - this.hour;
+    let minDiff = todayMin - this.min;
+    let secondDiff = todaySec - this.second;
+
+
     let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     if (d1 > d2) {
@@ -35,7 +47,20 @@ export class AgeCalculatorComponent implements OnInit {
     let d = d2 - d1;
     let m = m2 - m1;
     let y = y2 - y1;
+    if (hourDiff < 0) {
 
-    this.age = `   ${y}  Years  ${m}   Months   ${d}  Days.`;
+      hourDiff = 24 + hourDiff
+      
+    }
+    if (minDiff < 0) {
+      minDiff = 60 + minDiff
+    }
+    if (secondDiff < 0) {
+      secondDiff = 60 + secondDiff
+    }
+    console.log(todayHour, todayMin, todaySec)
+    console.log(hourDiff, minDiff, secondDiff)
+
+    this.age = `   ${y}  Years  ${m}   Months   ${d}  Days ${hourDiff} hours ${minDiff} minutes ${secondDiff} second.`;
   }
 }
