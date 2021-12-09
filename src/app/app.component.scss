@@ -1,0 +1,35 @@
+
+
+ 
+
+ article{
+    margin-left: 15%;
+ }
+
+ nav {
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    z-index: 1;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  nav a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  nav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  nav a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }

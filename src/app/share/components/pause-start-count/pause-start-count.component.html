@@ -1,0 +1,16 @@
+
+<div class="main-conatiner">
+    <div class="pause">
+        Enter Timer Limit: <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput type="text" [(ngModel)]="initialCount">
+        </mat-form-field>
+    </div>
+    <div class="start">
+        <button mat-stroked-button *ngIf="startStop" (click)="onStart()">start</button>
+        <button mat-stroked-button *ngIf="!startStop" (click)="onPause()">pause</button>
+        <button mat-stroked-button (click)="onReset()">reset</button>
+    </div>
+       
+ 
+    <p *ngFor="let pauseAt of _pauseAt">Pause At: {{pauseAt}}</p>
+</div>

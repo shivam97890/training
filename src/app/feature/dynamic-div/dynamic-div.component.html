@@ -1,0 +1,13 @@
+
+<div 
+infinite-scroll
+[infiniteScrollDistance]="1"
+[infiniteScrollThrottle]="300"
+(scrolled)="onScroll($event)"
+>
+<div class="dynamic-box" *ngFor="let list of divList">
+    <p>{{list}}</p>
+       <button  mat-stroked-button (click)="getCount(list)">Click Me</button>
+   </div>
+</div>
+

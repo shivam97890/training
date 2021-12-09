@@ -1,0 +1,20 @@
+.main-container{
+display: grid;
+grid-template-columns: auto auto;
+background-color: rgb(226, 179, 117);
+height: 100vh;
+color: #fff;
+}
+
+.counter{
+    position: relative;
+    border: 1px solid #555;
+    margin: 20px;
+    height: 300px;
+    color: #000;
+    background:#fff
+}
+.timeStamp{
+    width: 500px;
+    margin: 20px;
+}
