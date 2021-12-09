@@ -6,22 +6,28 @@
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <mat-form-field  appearance="outline">
+    <mat-form-field appearance="outline">
         <mat-label>Hour</mat-label>
-        <input matInput placeholder="Hour" [(ngModel)]="hour" >
-      </mat-form-field>:
-      <mat-form-field  appearance="outline">
+        <mat-select [(ngModel)]="hour">
+            <mat-option [value]="hours" *ngFor="let hours of hoursList">{{hours}}</mat-option>
+        </mat-select>
+    </mat-form-field>:
+    <mat-form-field appearance="outline">
         <mat-label>Minute</mat-label>
-        <input matInput placeholder="Minute" [(ngModel)]="min">
-      </mat-form-field>:
-      <mat-form-field  appearance="outline">
+        <mat-select [(ngModel)]="min">
+            <mat-option [value]="minutes" *ngFor="let minutes of minAndSecList">{{minutes}}</mat-option>
+        </mat-select>
+    </mat-form-field>:
+    <mat-form-field appearance="outline">
         <mat-label>second</mat-label>
-        <input matInput placeholder="Second" [(ngModel)]="second">
-      </mat-form-field>
-      <br>
+        <mat-select [(ngModel)]="second">
+            <mat-option [value]="seconds" *ngFor="let seconds of minAndSecList">{{seconds}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
     <button type="submit" mat-stroked-button (click)="ageCalculator()" class="registerbtn">Submit</button>
     <div class="display-age">
         <h3>Your Age is{{age}}</h3>
     </div>
-    
+
 </div>

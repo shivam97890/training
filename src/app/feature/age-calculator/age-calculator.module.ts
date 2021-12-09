@@ -8,6 +8,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 const routes: Routes = [
   {
     path: '',
@@ -25,6 +26,7 @@ const routes: Routes = [
     MatInputModule,
     FormsModule,
     MatButtonModule,
+    MatSelectModule,
     RouterModule.forChild(routes)
   ]
 })
