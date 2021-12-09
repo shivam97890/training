@@ -36,6 +36,6 @@ export class AgeCalculatorComponent implements OnInit {
     let m = m2 - m1;
     let y = y2 - y1;
 
-    this.age = `Your Age is   ${y}  Years  ${m}   Months   ${d}  Days.`;
+    this.age = `   ${y}  Years  ${m}   Months   ${d}  Days.`;
   }
 }
