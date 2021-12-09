@@ -31,6 +31,10 @@ const routes: Routes = [
     loadChildren: () => import('./feature/password-strength/password-strength.module').then(m => m.PasswordStrengthModule)
   },
   {
+    path: 'age-calculator',
+    loadChildren: () => import('./feature/age-calculator/age-calculator.module').then(m => m.AgeCalculatorModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
