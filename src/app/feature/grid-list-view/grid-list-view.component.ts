@@ -20,19 +20,15 @@ export class GridListViewComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private cd: ChangeDetectorRef, public gridListService: GridListService) { }
 
   ngOnInit(): void {
-    this.gridListService.getData().subscribe((data: any) => {
-      this.dataList = data;
-      if (this.dataList.length === 0) {
+   
         this.getData();
-      }
-    })
+      
 
   }
 
   getData(): void {
     this.subs.sink = this.gridListService.getData().subscribe((res: any) => {
       this.dataList = res;
-      this.gridListService.setData(res)
     })
   }
 
