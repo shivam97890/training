@@ -52,14 +52,8 @@ export class AgeCalculatorComponent implements OnInit, OnDestroy {
       let y = y2 - y1;
       let startTime = moment(dobTime, "HH:mm:ss");
       let endTime = moment(todayTime, "HH:mm:ss");
-  
-      // calculate total duration
-      let duration = moment.duration(endTime.diff(startTime));
-  
-      // duration in hours
+      let duration = moment.duration(startTime.diff(endTime));
       let hours = Math.floor(duration.asHours());
-  
-      // duration in minutes
       let minutes = Math.floor(duration.asMinutes() % 60);
       let seconds = Math.floor(duration.asSeconds() % 60);
       this.age = `   ${y}  Years  ${m}   Months   ${d}  Days ${hours} hours ${minutes} minutes ${seconds} second.`;

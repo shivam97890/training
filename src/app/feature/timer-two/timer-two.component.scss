@@ -1,14 +1,14 @@
 .main-container{
     display: grid;
     grid-template-columns: auto auto;
-    background-color: rgb(226, 179, 117);
     height: 100vh;
-    color: #fff;
+    color: #000;
     }
     
     .counter{
         position: relative;
         border: 1px solid #555;
+        border-radius:5px ;
         margin: 20px;
         height: 300px;
         color: #000;
